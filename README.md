@@ -1,2 +1,2 @@
-# ordis-group
+# ordis-group-web
 Ordis group main website
