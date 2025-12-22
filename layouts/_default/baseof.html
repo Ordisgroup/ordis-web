@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif; background:#1E1F25; color:#F9F9F9; }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 0 1.25rem; }
+    a { color: #F9F9F9; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    main { padding: 3rem 0; }
+    p { color:#C4C6CA; line-height: 1.6; font-size: 1.1rem; }
+    h1 { font-size: 2.6rem; margin: 0 0 1rem; }
+  </style>
+</head>
+<body>
+
+  {{ partial "header.html" . }}
+
+  <main class="wrap">
+    {{ block "main" . }}{{ end }}
+  </main>
+
+</body>
+</html>
+

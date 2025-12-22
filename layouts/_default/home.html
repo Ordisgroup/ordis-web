@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ .Title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #1E1F25;
+      color: #F9F9F9;
+    }
+    main {
+      max-width: 900px;
+      padding: 4rem 2rem;
+      margin: auto;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #C4C6CA;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    {{ define "main" }}
+    {{ .Content }}
+   {{ end }} 
+  </main>
+</body>
+</html>
+

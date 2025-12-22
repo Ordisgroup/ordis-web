@@ -1,0 +1,70 @@
+{{ define "main" }}
+
+<!-- HERO -->
+<section style="padding: 1.25rem 0 2rem 0;">
+  <div style="display:grid; grid-template-columns: 1.2fr 0.8fr; gap: 2rem; align-items:center;">
+
+    <div>
+      <h1 style="font-size: clamp(2rem, 4vw, 3.2rem); line-height:1.08; margin:0 0 0.9rem 0;">
+        Clarity. Structure. Intelligent systems.
+      </h1>
+
+      <p style="margin:0 0 1.2rem 0; max-width: 58ch;">
+        We design structured digital systems that turn complex ideas into calm, scalable solutions —
+        blending automation, design, and practical intelligence.
+      </p>
+
+      <div style="display:flex; gap:0.8rem; flex-wrap:wrap;">
+        <a href="/about/" style="display:inline-block; padding:0.8rem 1.05rem; border-radius:12px; background:#3B7FFF; color:#F9F9F9; text-decoration:none;">
+          Learn more
+        </a>
+        <a href="/contact/" style="display:inline-block; padding:0.8rem 1.05rem; border-radius:12px; border:1px solid rgba(255,255,255,0.14); color:#F9F9F9; text-decoration:none;">
+          Contact
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <img src="/images/ordis-cityscape.png"
+           alt="Ordis Group Cityscape"
+           style="width:100%; height:auto; border-radius:18px; display:block; box-shadow: 0 12px 40px rgba(0,0,0,0.35);" />
+    </div>
+
+  </div>
+</section>
+
+<div style="border-top:1px solid rgba(255,255,255,0.08); margin: 2rem 0;"></div>
+
+<!-- MARKDOWN CONTENT (this is the key!) -->
+<section style="padding: 0 0 2rem 0;">
+  <div class="content" style="max-width: 70ch;">
+    {{ .Content }}
+  </div>
+</section>
+
+<!-- SIMPLE FEATURE ROW -->
+<section style="padding: 0 0 1rem 0;">
+  <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+    <div style="border:1px solid rgba(255,255,255,0.08); border-radius:16px; padding:1.1rem;">
+      <h3 style="margin:0 0 0.5rem 0;">Structured intelligence</h3>
+      <p style="margin:0; opacity:0.88;">Clear thinking, mapped processes, and systems that stay understandable as they grow.</p>
+    </div>
+    <div style="border:1px solid rgba(255,255,255,0.08); border-radius:16px; padding:1.1rem;">
+      <h3 style="margin:0 0 0.5rem 0;">Automation with intent</h3>
+      <p style="margin:0; opacity:0.88;">Reduce friction without losing control — simple workflows that actually stick.</p>
+    </div>
+    <div style="border:1px solid rgba(255,255,255,0.08); border-radius:16px; padding:1.1rem;">
+      <h3 style="margin:0 0 0.5rem 0;">Calm design</h3>
+      <p style="margin:0; opacity:0.88;">Minimal, precise UI and a tone that feels composed — not “shouty”.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  @media (max-width: 900px) {
+    section > div[style*="grid-template-columns: 1.2fr 0.8fr"] { grid-template-columns: 1fr !important; }
+    section > div[style*="grid-template-columns: repeat(3"] { grid-template-columns: 1fr !important; }
+  }
+</style>
+
+{{ end }}
